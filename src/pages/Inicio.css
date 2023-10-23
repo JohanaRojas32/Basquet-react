@@ -1,0 +1,64 @@
+:root {
+    --colorblanco: #E5E5CB;
+    
+}
+
+body {  
+    background-color: #303030e3;
+}
+
+.navbar-expand-lg.joha-nav {
+    background-color: #1A120B;
+}
+
+.joha.nav-link.active {
+    color: var(--colorblanco);
+}
+
+.joha.nav-link {
+    color: var(--colorblanco);
+}
+
+.d-flex i.carrito {
+    color: var(--colorblanco);
+}
+
+.card.joha-card {
+    background-color: #fcedd4bc;
+}/* #beb9b9, #dad8d7 */     /* fcedd4bc */
+
+
+.joha-carousel {
+    width: 80%;
+}
+
+.agregar-carrito {
+    background-color: #e99e13;
+    box-shadow: -.6px .7px gray; ;
+}
+
+.agregar-carrito:hover {
+    background-color: #d1780ac3;
+    box-shadow: -.3px .4px gray;
+}
+
+
+.iconos-footer li {
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+.joha-footer {
+    background-color: #1f1e1e;
+}
+
+.joha.iconos-footer i {
+    color: var(--colorblanco);
+    margin: .8em;
+    padding: 0;
+}
+
+.joha.iconos-footer i.fb {
+  border-radius: 50%;
+}

@@ -1,0 +1,35 @@
+.tarjetas img {
+    width: 5em;
+}
+
+.joha-carrito {
+    background-color: #fcedd4bc;
+}
+/* d6d6d6de */
+
+.carrito-lista {
+    border-radius: 4px;
+}
+
+.carrito-boton {
+    background-color: #e99e13;
+    box-shadow: -.6px .7px gray;
+}
+
+.carrito-boton:hover {
+    background-color: #d1780ac3;
+    box-shadow: -.3px .4px gray;
+
+}
+
+.joha-eliminar-producto {
+    background-color: #f52626;
+    color: white;
+    box-shadow: -.6px .7px gray;
+}
+
+.joha-eliminar-producto:hover {
+    background-color: #e92424;
+    color: white;
+    box-shadow: -.3px .4px gray;
+}

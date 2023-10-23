@@ -1,8 +1,18 @@
+import Card from '../components/Card'
+import Carousel from '../components/Carousel'
+import './Inicio.css'
 import React from 'react'
 
 const Inicio = () => {
   return (
-    <div>Inicio</div>
+    <>
+     <section className="row my-5 d-flex justify-content-center">
+    
+    <Carousel />
+    <Card />
+  
+    </section>
+    </>
   )
 }
 

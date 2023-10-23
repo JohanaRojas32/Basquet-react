@@ -8,11 +8,15 @@ import Nosotros from './pages/Nosotros'
 import Contacto from './pages/Contacto'
 import Carrito from './pages/Carrito'
 import NoEncontrada from './pages/NoEncontrada'
+import Navbar from './components/Navbar'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <BrowserRouter>
+
+  <Navbar />
+
     <main className='container'>
     <Routes>
         <Route path='/'  element={<Inicio/>} />
