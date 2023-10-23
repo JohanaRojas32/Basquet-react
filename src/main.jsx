@@ -9,6 +9,7 @@ import Contacto from './pages/Contacto'
 import Carrito from './pages/Carrito'
 import NoEncontrada from './pages/NoEncontrada'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -28,6 +29,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Routes>
 
     </main>
+
+    <Footer />
     </BrowserRouter>
 
   </React.StrictMode>,

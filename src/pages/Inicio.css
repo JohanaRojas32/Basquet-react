@@ -62,3 +62,7 @@ body {
 .joha.iconos-footer i.fb {
   border-radius: 50%;
 }
+
+.titulo-destacado {
+    color: var(--colorblanco);
+}
