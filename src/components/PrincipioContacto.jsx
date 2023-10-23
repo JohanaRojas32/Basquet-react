@@ -14,7 +14,7 @@ const PrincipioContacto = () => {
   </div>
 
 
-<div className=" col-7 my-5 titulo-destacado"  >
+<div className=" col-7  titulo-destacado"  >
   <h5>También podés dejarnos tus datos y un asesor se comunicará contigo:</h5>
 </div>
 

@@ -5,7 +5,7 @@ const Form = () => {
  
 
 
-     <div className="mb-3">
+     <div className="col-7 mb-5 mt-3 titulo-destacado">
     <form action="https://formspree.io/f/xpzgwgeb" method="post" target="_blank">
     <label  className="form-label">Nombre:</label>
     <input type="text" className="form-control joha-form"  name='name'/>
