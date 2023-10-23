@@ -1,0 +1,54 @@
+:root {
+    --colorblanco: #E5E5CB;
+    
+}
+
+
+.titulo-destacado {
+    color: var(--colorblanco);
+}
+
+.titulo-destacado span{
+    color: #FF8400;
+}
+
+.nosotros-iconos li {
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+.nosotros-iconos {
+    margin: 3em 0;
+}
+
+.nosotros-iconos i {
+    margin-right: .8em;
+    padding: 0;
+    transform: scale(100% , 100%);
+}
+
+.nosotros-iconos i:hover {
+    transform: scale(110% , 110%);
+}
+
+
+.nosotros-iconos i.fb {
+    color: #1877f2 ;
+}
+
+.nosotros-iconos i.ig {
+
+    background: -webkit-linear-gradient(#ffdc80,#fcaf45,#f77737,#f56040,#fd1d1d,#e1306c,#c13584,#833ab4,#5851db,#405de6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+
+.nosotros-iconos i.tw {
+    color: #1da1f2;
+}
+
+.nosotros-iconos i.im {
+    color: crimson;
+}
