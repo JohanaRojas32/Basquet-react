@@ -1,8 +1,13 @@
 import './Nosotros.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Nosotros = () => {
+
+  useEffect(() => {
+    document.title = 'NBA STORE - NOSOTROS'
+  }, [])
+
   return (
     <div className="row mt-5">
 

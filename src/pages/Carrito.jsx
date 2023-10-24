@@ -1,7 +1,13 @@
 import './Carrito.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Carrito = () => {
+
+  useEffect(() => {
+    document.title = 'NBA STORE - CARRITO'
+  }, [])
+
+
   return (
     <section className="container my-5">
     <div className="row d-flex-justify-content-center">
