@@ -1,9 +1,14 @@
-import React from 'react'
+
 
 const Card = ( { producto } ) => {
+
+  const handleComprar = (producto) => {
+    console.log('comprando->', producto)
+  }
+
+
   return (
   
-   
     <div className="card col-3 m-2 shadow-sm joha-card">
       <img src={producto.img} className="card-img-top" alt="pelota wilson"/>
       <div className="card-body">
@@ -13,7 +18,7 @@ const Card = ( { producto } ) => {
           <li className="list-group-item calidad">{producto.calidad}</li>
           <li className="list-group-item precio">{producto.precio}</li>
         </ul>
-        <a href="#" className="btn agregar-carrito" data-id="1">Comprar</a>
+        <button className="btn agregar-carrito" onClick={() => handleComprar(producto)}>Comprar</button>
       </div>
     </div>
 

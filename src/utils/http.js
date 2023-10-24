@@ -18,3 +18,12 @@ export const get = async (url) => {
         console.log(`ERROG get ->`, error)
     }
 }
+
+
+
+
+//! CRUD -> C:  CREATE => POST
+
+//! CRUD -> U:  UPDATE => PUT
+
+//! CRUD -> D:  DELETE => DELETE
