@@ -11,27 +11,29 @@ import NoEncontrada from './pages/NoEncontrada'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { ProductosProvider } from './context/ProductosContext'
+import { CarritoProvider } from './context/CarritoContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <ProductosProvider>
-      <BrowserRouter>
-      
-        <Navbar />
-      <main className='container'>
-      <Routes>
-          <Route path='/'  element={<Inicio/>} />
-          <Route path='/nosotros'  element={<Nosotros/>} />
-          <Route path='/contacto'  element={<Contacto/>} />
-          <Route path='/carrito'  element={<Carrito/>} />
-          <Route path='*'  element={<NoEncontrada/>} />
-        </Routes>
-      </main>
-      <Footer />
-      </BrowserRouter>
+      <CarritoProvider>
+        <BrowserRouter>
+
+          <Navbar />
+          <main className='container'>
+            <Routes>
+              <Route path='/' element={<Inicio />} />
+              <Route path='/nosotros' element={<Nosotros />} />
+              <Route path='/contacto' element={<Contacto />} />
+              <Route path='/carrito' element={<Carrito />} />
+              <Route path='*' element={<NoEncontrada />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+        </CarritoProvider>
     </ProductosProvider>
 
-
-  </React.StrictMode>,
+  </React.StrictMode >,
 )

@@ -1,9 +1,18 @@
+import { useContext } from "react"
+import CarritoContext from "../context/CarritoContext"
+
+
 
 
 const Card = ( { producto } ) => {
+//ME TRAIGO EL agregarCarritoContext:
+const { agregarCarritoContext } = useContext(CarritoContext)
+
+
 
   const handleComprar = (producto) => {
     console.log('comprando->', producto)
+    agregarCarritoContext(producto)
   }
 
 

@@ -5,5 +5,6 @@
         {"id":3, "nombre":"Spalding Street Phantom", "tipo":"Exteriores", "calidad":"Original", "precio":"26900", "img":"/img/spalding-negra.webp"},
         {"id":4, "nombre":"Pelota Wilson Reaction", "tipo":"Exteriores", "calidad":"Original", "precio":"27100", "img":"/img/magneotravez.webp"},
         {"id":5, "nombre":"Pelota Spalding street", "tipo":"Exteriores", "calidad":"Original", "precio":"21100", "img":"/img/spalding-violeta.webp"}
-    ]
+    ],
+    "carrito": []
 }

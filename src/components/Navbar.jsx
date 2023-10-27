@@ -49,7 +49,7 @@ const Navbar = () => {
           </table>
           <div className="d.grid gap-2 d-md-block justify-content-center ms-1">
             <button id="vaciar-carrito" className="btn btn-primary">Vaciar carrito</button>
-            <button id="procesar-pedido" className="btn btn-danger">Procesar compra</button>
+            <Link id="procesar-pedido" className="btn btn-danger" to='/carrito'>Procesar compra</Link>
 
           </div>
         </ul>
