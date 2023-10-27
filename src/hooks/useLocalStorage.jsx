@@ -41,6 +41,27 @@ export const useLocalStorage = (clave, valorInicial = []) => {
 
 
 
+//! ELIMINAR PRODUCTO DEL LS:
+
+const eliminarValorLS = (id) => {
+ try {
+    
+    const nuevoValorAlmacenado = [...valorAlmacenado]
+    const indice = nuevoValorAlmacenado.findIndex(item => item.id === id)     //comparo id
+    //y si es true:
+    nuevoValorAlmacenado.splice(indice, 1)    //splice: para eliminar
+    setValorAlmacenado(nuevoValorAlmacenado)   //seteo el nuevoValorAlmacenado
+    window.localStorage.setItem(clave, JSON.stringify(nuevoValorAlmacenado))   // lo guardo en el LS
+
+
+ } catch (error) {
+    console.error(`Error al eliminar el producto con el id: ${id} en ${clave} del local storage`)
+ }
+}
+
+
+
+
 
     return [guardarValorLS, valorAlmacenado]
 

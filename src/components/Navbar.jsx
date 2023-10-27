@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import CargaCarritoInicio from './CargaCarritoInicio'
+import CarritoContext from '../context/CarritoContext'
 
 const Navbar = () => {
+  const { carrito } = useContext(CarritoContext)
+
   return (
     <header>
   <nav className="navbar navbar-expand-lg joha-nav py-0">
@@ -45,6 +49,13 @@ const Navbar = () => {
             </thead>
             <tbody>
               
+                  {
+                    carrito && carrito.map(item => (
+                      <CargaCarritoInicio key={item.id} item={item}/>
+                    ))
+                  }
+
+
             </tbody>
           </table>
           <div className="d.grid gap-2 d-md-block justify-content-center ms-1">

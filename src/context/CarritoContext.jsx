@@ -36,7 +36,7 @@ const CarritoProvider = ({ children }) => {
             console.log(productoDeCarrito)
             productoDeCarrito.cantidad++        // que le agregue una cantidad
 
-            window.localStorage.setItem('carrito', JSON.stringify(carrito))    //todo lo vuelvo a guardar en el LS  //! OJO ACA , CAPAZ ESTO VA ABAJO
+            window.localStorage.setItem('carrito', JSON.stringify(carrito))    //todo lo vuelvo a guardar en el LS
         }
 
     }
