@@ -4,7 +4,14 @@ import CargaCarritoInicio from './CargaCarritoInicio'
 import CarritoContext from '../context/CarritoContext'
 
 const Navbar = () => {
-  const { carrito } = useContext(CarritoContext)
+  const { carrito, vaciarCarritoContext } = useContext(CarritoContext)
+
+
+  const handleVaciarCarrito = () => {
+    vaciarCarritoContext()
+  }
+
+
 
   return (
     <header>
@@ -59,7 +66,7 @@ const Navbar = () => {
             </tbody>
           </table>
           <div className="d.grid gap-2 d-md-block justify-content-center ms-1">
-            <button id="vaciar-carrito" className="btn btn-primary">Vaciar carrito</button>
+            <button id="vaciar-carrito" className="btn btn-primary" onClick={handleVaciarCarrito}>Vaciar carrito</button>
             <Link id="procesar-pedido" className="btn btn-danger" to='/carrito'>Procesar compra</Link>
 
           </div>

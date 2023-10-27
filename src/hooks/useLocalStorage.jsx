@@ -61,8 +61,18 @@ const eliminarValorLS = (id) => {
 
 
 
+//! VACIAR EL LS:
+
+    const vaciarLS = () => {
+        window.localStorage.clear()
+        window.localStorage.setItem(clave, JSON.stringify(valorInicial))
+        setValorAlmacenado(valorInicial)
+    }
 
 
-    return [guardarValorLS,eliminarValorLS , valorAlmacenado]
+
+
+
+    return [guardarValorLS,eliminarValorLS , vaciarLS ,valorAlmacenado]
 
 }
