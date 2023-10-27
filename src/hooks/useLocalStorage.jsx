@@ -63,6 +63,6 @@ const eliminarValorLS = (id) => {
 
 
 
-    return [guardarValorLS, valorAlmacenado]
+    return [guardarValorLS,eliminarValorLS , valorAlmacenado]
 
 }

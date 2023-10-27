@@ -9,7 +9,7 @@ const url = import.meta.env.VITE_ENDPOINT_CARRITO
 
 const CarritoProvider = ({ children }) => {
     //ESTADO de useLocalStorage:
-    const [agregarAlCarrito, carrito] = useLocalStorage('carrito', [])
+    const [agregarAlCarrito, eliminarDelCarrito,  carrito] = useLocalStorage('carrito', [])
 
 
 
@@ -46,7 +46,7 @@ const CarritoProvider = ({ children }) => {
 
     
     const eliminarProductoCarritoContext = (id) => {
-        
+        eliminarDelCarrito(id)
     }
 
     const guardarCarritoContext = () => {            

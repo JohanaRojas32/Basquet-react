@@ -1,9 +1,15 @@
 import React from 'react'
 import { useContext } from 'react'
+import CarritoContext from '../context/CarritoContext'
 
 const CargaCarritoInicio = ( {item}) => {
- // const first = useContext(second)
+  const { eliminarProductoCarritoContext } = useContext(CarritoContext)
   
+  const handleEliminar = (id) => {
+    eliminarProductoCarritoContext(id)
+  }
+
+
     return (
     
     <tr>
@@ -13,7 +19,7 @@ const CargaCarritoInicio = ( {item}) => {
 <td>{item.nombre}</td>
 <td>{item.precio}</td>
 <td>
-    <button className="borrar-producto fas fa-times-circle btn-borrar" ></button>
+    <button className="borrar-producto fas fa-times-circle btn-borrar" onClick={() => handleEliminar(item.id)} ></button>
 </td>
 </tr>
     
