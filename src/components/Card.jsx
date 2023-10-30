@@ -19,7 +19,7 @@ const { agregarCarritoContext } = useContext(CarritoContext)
   return (
   
     <div className="card col-3 m-2 shadow-sm joha-card">
-      <img src={producto.img} className="card-img-top" alt="pelota wilson"/>
+      <img src={`/img/${producto.foto}`} className="card-img-top" alt="pelota wilson"/>
       <div className="card-body">
         <h5 className="card-title">{producto.nombre}</h5>
         <ul className="list-unstyled mt-3 mb-4">

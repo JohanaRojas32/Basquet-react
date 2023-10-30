@@ -14,7 +14,7 @@ const CargaCarritoInicio = ( {item}) => {
     
     <tr>
    <td>
-    <img src={item.img} alt={item.nombre} width="100"/>
+    <img src={`/img/${item.foto}`} alt={item.nombre} width="100"/>
 </td>
 <td>{item.nombre}</td>
 <td>{item.precio}</td>
