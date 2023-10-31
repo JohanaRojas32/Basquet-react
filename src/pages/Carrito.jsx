@@ -1,7 +1,12 @@
+import ItemCarrito from '../components/ItemCarrito'
+import CarritoContext from '../context/CarritoContext'
 import './Carrito.css'
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 const Carrito = () => {
+  const { carrito } = useContext(CarritoContext)
+
+
 
   useEffect(() => {
     document.title = 'NBA STORE - CARRITO'
@@ -18,7 +23,13 @@ const Carrito = () => {
         </div>
 
         <div className="card-body" id="lista-compra">
+    {/*  Aca me traigo lo que tenog en el componente ItemCarrito.jsx (productos para comprar)*/}
 
+      {
+        carrito && carrito.map(item => (
+          <ItemCarrito key={item.id} item={item}/>
+        ))
+      }
           
 
         </div>        
