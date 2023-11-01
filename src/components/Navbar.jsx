@@ -35,6 +35,9 @@ const Navbar = () => {
           <li className="nav-item">
             <Link className="joha nav-link mx-5" to="/contacto">Contacto</Link>
           </li>
+          <li className="nav-item">
+            <Link className="joha nav-link mx-5" to="/alta">Alta</Link>
+          </li>
         </ul>
 
       </div>

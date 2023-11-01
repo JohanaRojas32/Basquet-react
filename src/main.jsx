@@ -12,6 +12,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { ProductosProvider } from './context/ProductosContext'
 import { CarritoProvider } from './context/CarritoContext'
+import Alta from './pages/Alta'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/contacto' element={<Contacto />} />
               <Route path='/carrito' element={<Carrito />} />
+              <Route path='/alta' element={<Alta />} />
               <Route path='*' element={<NoEncontrada />} />
             </Routes>
           </main>
