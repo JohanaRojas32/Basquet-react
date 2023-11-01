@@ -9,7 +9,7 @@ const url = import.meta.env.VITE_ENDPOINT_CARRITO
 
 const CarritoProvider = ({ children }) => {
     //ESTADO de useLocalStorage:
-    const [agregarAlCarrito, eliminarDelCarrito, vaciarCarrito,  carrito] = useLocalStorage('carrito', [])
+    const [agregarAlCarrito, eliminarDelCarrito, vaciarCarrito,  guardarCarrito ,carrito] = useLocalStorage('carrito', [])
 
 
 
@@ -36,11 +36,23 @@ const CarritoProvider = ({ children }) => {
             console.log(productoDeCarrito)
             productoDeCarrito.cantidad++        // que le agregue una cantidad
 
-            window.localStorage.setItem('carrito', JSON.stringify(carrito))    //todo lo vuelvo a guardar en el LS
+            guardarCarrito(carrito)    //todo lo vuelvo a guardar en el LS
         }
 
     }
  
+
+
+    const cambiarCantidadCarritoContext = (productoNuevaCantidad) => {
+        try {
+            
+            const nuevoCarrito = carrito.map(producto => producto.id === productoNuevaCantidad.id ? productoNuevaCantidad : producto)
+            guardarCarrito(nuevoCarrito)
+        } catch (error) {
+            console.error('[cambiarCantidadCarritoContext]: No se pudo guardar el producto con la nueva cantidad')
+        }
+    }
+
 
 
 
@@ -60,7 +72,36 @@ const CarritoProvider = ({ children }) => {
 
 
 
-    const data={carrito, agregarCarritoContext, eliminarProductoCarritoContext, guardarCarritoContext , vaciarCarritoContext }
+    const cantidadTotalArticulosCarritoContext = () => {
+        let sumaTotalArticulos = carrito.reduce((total, producto) => {    //reduce -> recorre el array
+            return total + producto.cantidad
+        }, 0)
+        return sumaTotalArticulos
+    }
+
+
+    const precioTotalArticulosCarritoContext = () => {
+        let sumaTotal = carrito.reduce((total, producto) => {
+            return total + (producto.precio * producto.cantidad)
+        }, 0)
+        return sumaTotal
+    }
+
+
+
+
+
+
+    const data={
+        carrito,
+         agregarCarritoContext,
+          eliminarProductoCarritoContext,
+           guardarCarritoContext ,
+            vaciarCarritoContext,
+             cantidadTotalArticulosCarritoContext,
+              precioTotalArticulosCarritoContext,
+               cambiarCantidadCarritoContext 
+            }
 
     return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>
 }

@@ -22,6 +22,18 @@ export const useLocalStorage = (clave, valorInicial = []) => {
 
 
 
+    const guardarValoresLS = (valores) => {
+        try {
+            
+            setValorAlmacenado(valores)
+            window.localStorage.setItem(clave, JSON.stringify(valores))
+
+        } catch (error) {
+            console.error('Error al guardar valores en el LS')
+        }
+    }
+
+
 
     //! GUARDAR PRODUCTO EN EL LS:
     const guardarValorLS = (valorNuevo) => {
@@ -73,6 +85,6 @@ const eliminarValorLS = (id) => {
 
 
 
-    return [guardarValorLS,eliminarValorLS , vaciarLS ,valorAlmacenado]
+    return [guardarValorLS,eliminarValorLS , vaciarLS , guardarValoresLS ,valorAlmacenado]
 
 }

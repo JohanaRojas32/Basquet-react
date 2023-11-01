@@ -4,7 +4,7 @@ import './Carrito.css'
 import React, { useContext, useEffect } from 'react'
 
 const Carrito = () => {
-  const { carrito } = useContext(CarritoContext)
+  const { carrito, cantidadTotalArticulosCarritoContext, precioTotalArticulosCarritoContext, cambiarCantidadCarritoContext } = useContext(CarritoContext)
 
 
 
@@ -19,7 +19,7 @@ const Carrito = () => {
       <div className="col-8">
        <div className="card mb-4 joha-carrito">
         <div className="card-header py-4">
-          <h5 className="mb-0">Carrito de productos</h5>
+          <h5 className="mb-0">Carrito - {cantidadTotalArticulosCarritoContext()}  artículos</h5>
         </div>
 
         <div className="card-body" id="lista-compra">
@@ -27,7 +27,7 @@ const Carrito = () => {
 
       {
         carrito && carrito.map(item => (
-          <ItemCarrito key={item.id} item={item}/>
+          <ItemCarrito key={item.id} itemProducto={item}/>
         ))
       }
           
@@ -80,7 +80,7 @@ const Carrito = () => {
                       <strong>Total de la compra</strong>
                       <strong>IVA incluido</strong>
                     </div>
-                    <p><strong id="total"></strong></p>
+                    <p><strong>${precioTotalArticulosCarritoContext().toFixed(2)}</strong></p>
                   </li>
             </ul>
 

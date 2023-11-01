@@ -7,8 +7,9 @@ export const useForms = (estadoInicial = {} ) => {
     const handleChangeInput = (e) => {
         const {name, value} = e.target
         setValues({
-            ...values, [name]: value                   // lo que tenia (...values) + el valor que estan escribiendo en ese momento sobre el input
-        })
+            ...values, 
+            [name]: Number(value)                   // lo que tenia (...values) + el valor que estan escribiendo en ese momento sobre el input
+        })                          //! "Number(value)-> porque me estaba tomando cada cantidad ocmo un string y en lugar de sumarse se estaban acoplando"
     }
 
 
