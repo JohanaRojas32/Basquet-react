@@ -4,7 +4,7 @@ import CarritoContext from '../context/CarritoContext'
 
 const ItemCarrito = ({ itemProducto }) => {
 
-  const { cambiarCantidadCarritoContext } = useContext(CarritoContext)
+  const { cambiarCantidadCarritoContext, eliminarProductoCarritoContext } = useContext(CarritoContext)
 
   const [total, setTotal] = useState(itemProducto.precio * itemProducto.cantidad)
 
@@ -41,7 +41,10 @@ const ItemCarrito = ({ itemProducto }) => {
         <p>{itemProducto.calidad}</p>
         <p>{itemProducto.precio}</p>
 
-        <a type="button" className=" fa-solid fa-trash-can text-danger btn-sm me-1 mb-2 "></a>
+        <button className=" fa-solid fa-trash-can text-danger btn-sm me-1 mb-2 "
+         onClick={() => eliminarProductoCarritoContext(itemProducto.id)}>
+
+         </button>
 
       </div>
 

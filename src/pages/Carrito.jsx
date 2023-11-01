@@ -19,7 +19,7 @@ const Carrito = () => {
       <div className="col-8">
        <div className="card mb-4 joha-carrito">
         <div className="card-header py-4">
-          <h5 className="mb-0">Carrito - {cantidadTotalArticulosCarritoContext()}  artículos</h5>
+          <h5 className="mb-0">Carrito -{cantidadTotalArticulosCarritoContext()}  artículos</h5>
         </div>
 
         <div className="card-body" id="lista-compra">
