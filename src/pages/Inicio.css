@@ -43,25 +43,7 @@ body {
 }
 
 
-.iconos-footer li {
-    margin: 0;
-    padding: 0;
-    display: inline-block
-}
 
-.joha-footer {
-    background-color: #1f1e1e;
-}
-
-.joha.iconos-footer i {
-    color: var(--colorblanco);
-    margin: .8em;
-    padding: 0;
-}
-
-.joha.iconos-footer i.fb {
-  border-radius: 50%;
-}
 
 .titulo-destacado {
     color: var(--colorblanco);

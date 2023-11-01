@@ -1,9 +1,10 @@
+import './Footer.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="container-fluid joha-footer">
+    <footer className="container-fluid joha-footer position-footer">
 
   <div className="d-flex justify-content-center">
     <ul className="joha iconos-footer">
