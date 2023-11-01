@@ -8,7 +8,9 @@ const Carrito = () => {
     carrito, 
     cantidadTotalArticulosCarritoContext, 
     precioTotalArticulosCarritoContext,  
-    guardarCarritoContext } = useContext(CarritoContext)
+    guardarCarritoContext,
+    precioTotalSinIvaCarritoContext,
+    valorDelIVACarritoContext } = useContext(CarritoContext)
 
 
 
@@ -63,7 +65,7 @@ const Carrito = () => {
               
               <li className="list-group-item d-flex justify-content-between aling-items-center border-0 ">
                 Productos
-                <span id="sub-total"></span>
+                <span>{precioTotalSinIvaCarritoContext()} </span>
               </li>
 
                 <li className="list-group-item d-flex justify-content-between aling-items-center border-0">
@@ -76,7 +78,7 @@ const Carrito = () => {
                   <div>
                       <strong>IVA</strong>
                   </div>
-                  <p><strong id="iva"></strong></p>
+                  <p><strong>{valorDelIVACarritoContext()}</strong></p>
             </li>
 
                   <li className="list-group-item d-flex justify-content-between aling-items-center border-0 ">

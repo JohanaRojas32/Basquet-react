@@ -92,6 +92,7 @@ const CarritoProvider = ({ children }) => {
     }
 
 
+    
     const precioTotalArticulosCarritoContext = () => {
         let sumaTotal = carrito.reduce((total, producto) => {
             return total + (producto.precio * producto.cantidad)
@@ -101,10 +102,38 @@ const CarritoProvider = ({ children }) => {
 
 
 
+    
+    const precioTotalSinIvaCarritoContext = () => {
+    //console.log('sacando el precio sin iva')   
+
+    let sumaTotal = carrito.reduce((total, producto) => {
+        return total + (producto.precio * producto.cantidad)
+    }, 0)
+
+    let IVA = Number(sumaTotal * 0.18)
+    //console.log(IVA)
+    let subTotal = Number(sumaTotal - IVA)
+    //console.log(subTotal)
+    return subTotal
+    }
+    
+
+
+    const valorDelIVACarritoContext = () => {
+        let sumaTotal = carrito.reduce((total, producto) => {
+            return total + (producto.precio * producto.cantidad)
+        }, 0)
+    
+        let IVA = Number(sumaTotal * 0.18)
+        //console.log(IVA)
+        let subTotal = Number(sumaTotal - IVA)
+        //console.log(subTotal)
+        return IVA
+    }
 
 
 
-    const data={
+    const data= {
         carrito,
          agregarCarritoContext,
           eliminarProductoCarritoContext,
@@ -112,7 +141,9 @@ const CarritoProvider = ({ children }) => {
             vaciarCarritoContext,
              cantidadTotalArticulosCarritoContext,
               precioTotalArticulosCarritoContext,
-               cambiarCantidadCarritoContext 
+               cambiarCantidadCarritoContext,
+               precioTotalSinIvaCarritoContext,
+               valorDelIVACarritoContext
             }
 
     return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>
