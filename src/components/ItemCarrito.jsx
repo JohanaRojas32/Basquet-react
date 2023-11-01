@@ -1,3 +1,4 @@
+import './ItemCarrito.css'
 import React, { useContext, useEffect, useState } from 'react'
 import { useForms } from '../hooks/useForms'
 import CarritoContext from '../context/CarritoContext'
@@ -41,7 +42,7 @@ const ItemCarrito = ({ itemProducto }) => {
         <p>{itemProducto.calidad}</p>
         <p>{itemProducto.precio}</p>
 
-        <button className=" fa-solid fa-trash-can text-danger btn-sm me-1 mb-2 "
+        <button className=" fa-solid fa-trash-can text-danger tachito btn-sm me-1 mb-2 "
          onClick={() => eliminarProductoCarritoContext(itemProducto.id)}>
 
          </button>
