@@ -24,6 +24,33 @@ export const get = async (url) => {
 
 //! CRUD -> C:  CREATE => POST
 
+export const post = async (url, data) => {
+
+    const fetchConfig = {
+        method: 'POST',
+        headers: {'Content-type': 'application/json'},
+        body: JSON.stringify(data)          // porque el backend siempre va a esperar un string
+    }
+
+    
+    try {
+        const respuesta = await fetch(url, fetchConfig)
+
+        if(!respuesta.ok) {
+            throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
+        }
+    
+        const datos = await respuesta.json()     
+    
+        return datos
+    
+    } catch (error) {
+        console.log(`ERROG POST ->`, error)
+    }
+}
+
+
+
 //! CRUD -> U:  UPDATE => PUT
 
 //! CRUD -> D:  DELETE => DELETE

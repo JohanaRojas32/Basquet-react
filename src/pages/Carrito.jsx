@@ -4,7 +4,11 @@ import './Carrito.css'
 import React, { useContext, useEffect } from 'react'
 
 const Carrito = () => {
-  const { carrito, cantidadTotalArticulosCarritoContext, precioTotalArticulosCarritoContext, cambiarCantidadCarritoContext } = useContext(CarritoContext)
+  const { 
+    carrito, 
+    cantidadTotalArticulosCarritoContext, 
+    precioTotalArticulosCarritoContext,  
+    guardarCarritoContext } = useContext(CarritoContext)
 
 
 
@@ -84,7 +88,7 @@ const Carrito = () => {
                   </li>
             </ul>
 
-            <button type="button" className="btn carrito-boton btn-lg btn-block mt-4">Comprar</button>
+            <button type="button" className="btn carrito-boton btn-lg btn-block mt-4" onClick={guardarCarritoContext}>Comprar</button>
 
           </div>
         </div>

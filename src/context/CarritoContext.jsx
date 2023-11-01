@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { post } from "../utils/http";
 
 //! Creando contexto
 const CarritoContext = createContext()
@@ -61,9 +62,20 @@ const CarritoProvider = ({ children }) => {
         eliminarDelCarrito(id)
     }
 
-    const guardarCarritoContext = () => {            
+
+
+    const guardarCarritoContext = async () => {             // peticion asincronica para que gaurde el carrito (backend)
         
+        try {
+            const carritoGuardado = await post(url, carrito)
+
+        } catch (error) {
+            console.error('[guardarCarritoContext]: No se pudo guardar el carrito', error)
+        }
+
     }
+
+
 
 
     const vaciarCarritoContext = () => {
