@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TableRowAlta from './TableRowAlta'
+import ProductosContext from '../context/ProductosContext'
 
 const TableAlta = () => {
+
+const { productos } = useContext(ProductosContext)
+
+
   return (
    <>
    <h2 className='mt-5'>Tabla de productos</h2>
@@ -19,7 +24,9 @@ const TableAlta = () => {
                 </thead>
                 <tbody>
     {
-                <TableRowAlta />
+          productos && productos.map(producto => (
+                <TableRowAlta key={producto.id} producto={producto} />
+          ))
     }
                 </tbody>
             </table>
