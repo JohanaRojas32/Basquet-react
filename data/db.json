@@ -39,11 +39,15 @@
       "calidad": "Original",
       "precio": "21100",
       "foto": "spalding-violeta.webp"
+    },
+    {
+      "id": 6,
+      "nombre": "Pelota wilson evolution",
+      "tipo": "cuero-interiores",
+      "calidad": "original",
+      "precio": "31000",
+      "foto": "wilson-evolution2.webp"
     }
   ],
-  "carrito": [
-    [
-    
-    ]
-  ]
+  "carrito": []
 }

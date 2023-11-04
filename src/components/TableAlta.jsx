@@ -25,7 +25,7 @@ const { productos } = useContext(ProductosContext)
                 <tbody>
     {
           productos && productos.map(producto => (
-                <TableRowAlta key={producto.id} producto={producto} />
+                <TableRowAlta key={`${producto.id}-${producto.nombre}`} producto={producto} />
           ))
     }
                 </tbody>

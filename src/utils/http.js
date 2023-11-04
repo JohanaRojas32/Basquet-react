@@ -42,10 +42,10 @@ export const post = async (url, data) => {
     
         const datos = await respuesta.json()     
     
-        return datos
+       // return datos
     
     } catch (error) {
-        console.log(`ERROG POST ->`, error)
+        console.log(`ERROR POST ->`, error)
     }
 }
 

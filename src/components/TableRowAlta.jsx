@@ -12,7 +12,7 @@ const TableRowAlta = ( { producto } ) => {
     <td>{producto.tipo}</td>
     <td>{producto.calidad}</td>
     <td>{producto.precio}</td>
-    <td>{`${producto.foto}`}</td>
+    <td>{producto.foto}</td>
     <td>
       {/* Lo hicimos asi para poder reutilizar este boton despues en form */}
       <button className='btn btn-warning me-2'>Modificar</button>

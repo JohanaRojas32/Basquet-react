@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
-import { get } from "../utils/http";
+import { get, post } from "../utils/http";
 export { createContext } from "react";
+
 
 
 // creamos el contexto
@@ -21,7 +22,7 @@ const ProductosProvider = ( { children }) => {
     }, [])
     
 
-
+//! GET - OBTENER LOS PRODUCTOS EN EL ALTA
     const obtenerProductosBack = async () => {
        
         try {
@@ -34,9 +35,44 @@ const ProductosProvider = ( { children }) => {
     }
 
 
+//! POST - AGREGAR PRODUCTO NUEVO Y AL DB.JSON
+    const agregarProducto = async (nuevoProducto) => {
+        try {
+
+             const fetchConfig = {
+                method: 'POST',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify(nuevoProducto)          // porque el backend siempre va a esperar un string
+            }
+         
+            
+         
+                const respuesta = await fetch(url, fetchConfig)
+        
+                if(!respuesta.ok) {
+                    throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
+                }
+            
+                const productoCreado = await respuesta.json()     
+                console.log(productoCreado)
+
+                const nuevaProductoDB = [...productos, productoCreado]
+                setProductos(nuevaProductoDB) 
+
+            
+            } catch (error) {
+                console.log(`[agregarProducto]: no se pudo agregar el nuevo producto ->`, error)
+            }
+        }
 
 
-   const data={ productos }
+
+        
+    
+
+
+
+   const data={ productos, agregarProducto }
     
     return <ProductosContext.Provider value={data}>{children}</ProductosContext.Provider>
 }
