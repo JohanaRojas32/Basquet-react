@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ProductosContext from '../context/ProductosContext'
 
 
 
-const TableRowAlta = ( { producto } ) => {
+const TableRowAlta = ( { producto, setProductoAEditar } ) => {
+
+
+
+
 
 
 
@@ -15,7 +20,7 @@ const TableRowAlta = ( { producto } ) => {
     <td>{producto.foto}</td>
     <td>
       {/* Lo hicimos asi para poder reutilizar este boton despues en form */}
-      <button className='btn btn-warning me-2'>Modificar</button>
+      <button className='btn btn-warning me-2'onClick={() => setProductoAEditar(producto)} >Modificar</button>
       <button className='btn btn-dark'>eliminar</button>
     </td>
   </tr>

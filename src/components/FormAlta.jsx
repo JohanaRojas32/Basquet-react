@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ProductosContext from '../context/ProductosContext'
 
 
@@ -13,11 +13,18 @@ const FormularioInicial = {
 }
 
 
-const FormAlta = () => {
+const FormAlta = ({ productoAEditar }) => {
 
   const [formAlta, setFormAlta] = useState(FormularioInicial)
 
   const {agregarProducto} = useContext(ProductosContext)
+
+
+
+  useEffect(() => {
+    productoAEditar ? setFormAlta(productoAEditar) : setFormAlta(FormularioInicial)
+  }, [productoAEditar])
+  
 
 
 
@@ -87,7 +94,7 @@ const FormAlta = () => {
       value={formAlta.foto}
     />
 
-    <button type='submit' className='btn btn-success mx-3' onClick={agregarProducto}>Enviar</button>
+    <button type='submit' className='btn btn-success mx-3'>Enviar</button>
     <button type='reset' className='btn btn-dark' >Reset</button>
    </form>
 

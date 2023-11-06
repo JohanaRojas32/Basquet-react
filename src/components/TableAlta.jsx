@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import TableRowAlta from './TableRowAlta'
 import ProductosContext from '../context/ProductosContext'
 
-const TableAlta = () => {
+const TableAlta = ( {setProductoAEditar } ) => {
 
 const { productos } = useContext(ProductosContext)
 
@@ -25,7 +25,7 @@ const { productos } = useContext(ProductosContext)
                 <tbody>
     {
           productos && productos.map(producto => (
-                <TableRowAlta key={`${producto.id}-${producto.nombre}`} producto={producto} />
+                <TableRowAlta key={`${producto.id}-${producto.nombre}`} producto={producto} setProductoAEditar={setProductoAEditar} />
           ))
     }
                 </tbody>
