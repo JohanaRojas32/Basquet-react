@@ -65,7 +65,7 @@ const Carrito = () => {
               
               <li className="list-group-item d-flex justify-content-between aling-items-center border-0 ">
                 Productos
-                <span>{precioTotalSinIvaCarritoContext()} </span>
+                <span>${precioTotalSinIvaCarritoContext()} </span>
               </li>
 
                 <li className="list-group-item d-flex justify-content-between aling-items-center border-0">
@@ -78,7 +78,7 @@ const Carrito = () => {
                   <div>
                       <strong>IVA</strong>
                   </div>
-                  <p><strong>{valorDelIVACarritoContext()}</strong></p>
+                  <p><strong>{valorDelIVACarritoContext().toFixed(2)}</strong></p>
             </li>
 
                   <li className="list-group-item d-flex justify-content-between aling-items-center border-0 ">
