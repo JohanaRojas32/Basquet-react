@@ -5,7 +5,7 @@ import ProductosContext from '../context/ProductosContext'
 
 const TableRowAlta = ( { producto, setProductoAEditar } ) => {
 
-
+  const { eliminarProducto } = useContext(ProductosContext)
 
 
 
@@ -21,7 +21,7 @@ const TableRowAlta = ( { producto, setProductoAEditar } ) => {
     <td>
       {/* Lo hicimos asi para poder reutilizar este boton despues en form */}
       <button className='btn btn-warning me-2'onClick={() => setProductoAEditar(producto)} >Modificar</button>
-      <button className='btn btn-dark'>eliminar</button>
+      <button className='btn btn-dark' onClick={() => eliminarProducto(producto.id)}>eliminar</button>
     </td>
   </tr>
   )

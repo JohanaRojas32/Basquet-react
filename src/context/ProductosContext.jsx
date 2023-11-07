@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { get, post, put } from "../utils/http";
+import { get } from "../utils/http";
 export { createContext } from "react";
 
 
@@ -74,21 +74,27 @@ const ProductosProvider = ( { children }) => {
     const modificarProducto = async (productoEditado) => {
         console.log(productoEditado)
         const urlCompleta = url + productoEditado.id 
-        console.log(urlCompleta)
+        
+        console.log('esta es la url completa:', urlCompleta)
 
         try {
             const fetchConfig = {
                 method: 'PUT',
-                headers: {'Content-type': 'application/json'},
-                body: JSON.stringify(productoEditado)          // porque el backend siempre va a esperar un string
+                headers: {'content-type': 'application/json'},
+                body: JSON.stringify(productoEditado)        
             }
          
-            const respuesta = await fetch(urlCompleta, fetchConfig)
-              if(!respuesta.ok) {
-                throw new Error(`[Algo paso con PUT] Error... ${respuesta.status}`)
+           const respuest = await fetch(urlCompleta, fetchConfig)
+           console.log("respuest")
+           console.log(respuest)
+              if(!respuest.ok) {
+                throw new Error(`[Algo paso con PUT] Error... ${respuest.status}`)
               }
         
-              const data = await respuesta.json() 
+              const datos = await respuest.json()
+              console.log(datos)
+        
+            
 
 
               const nuevaProductoDB = productos.map(producto => producto.id === productoEditado.id ? productoEditado : producto)
@@ -98,19 +104,47 @@ const ProductosProvider = ( { children }) => {
         } catch (error) {
             console.error(`Error PUT`, error)
         }
-
-
-
-  
-
     }
+
+
+
+
+    //! METODO DELETE - Eliminar producto
+
+    const eliminarProducto = async (id) => {
+
+    try {
+        const urlCompleta = url + id
+        console.log(urlCompleta)
+
+        const fetchConfig = {
+            method: 'DELETE',
+        }
+
+        const respuesta = await fetch(urlCompleta, fetchConfig)
+        if(!respuesta.ok) {
+            throw new Error(`[eliminarUsuario] Error... ${respuesta.status}`)
+          }
+        
+          const data = await respuesta.json()
+          console.log(data)
+
+          // actualizo la base de datos:
+  const nuevaProductoDB = productos.filter(producto => producto.id !== id) 
+setProductos(nuevaProductoDB)
+
+    } catch (error) {
+        console.log('Algo paso con el [eliminarProducto]')
+    }
+    }
+
 
         
     
 
 
 
-   const data={ productos, agregarProducto, modificarProducto }
+   const data={ productos, agregarProducto, modificarProducto, eliminarProducto }
     
     return <ProductosContext.Provider value={data}>{children}</ProductosContext.Provider>
 }

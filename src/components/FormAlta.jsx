@@ -17,10 +17,10 @@ const FormAlta = ({ productoAEditar }) => {
 
   const [formAlta, setFormAlta] = useState(FormularioInicial)
 
-  const {agregarProducto} = useContext(ProductosContext)
+  const {agregarProducto, modificarProducto} = useContext(ProductosContext)
 
 
-
+//useeffect(que es para que se me cargue en el form el usuario que apreto para editar..)
   useEffect(() => {
     productoAEditar ? setFormAlta(productoAEditar) : setFormAlta(FormularioInicial)
   }, [productoAEditar])
@@ -43,8 +43,10 @@ const FormAlta = ({ productoAEditar }) => {
     if (formAlta.id === null) {
       agregarProducto(formAlta)
     } else {
-     console.log('tengo que hacer algo para actualizar')
+     modificarProducto(formAlta)
+     console.log(modificarProducto)
     }
+    console.log('que se resetee')
   }
 
 

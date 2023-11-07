@@ -4,6 +4,8 @@
 export const get = async (url) => {
     
     try {
+        console.log("ASDASDS")
+        console.log(url)
         const respuesta = await fetch(url)
 
         if(!respuesta.ok) {
@@ -53,7 +55,7 @@ export const post = async (url, data) => {
 
 //! CRUD -> U:  UPDATE => PUT
 
-
+/* 
 export const put = async (productoEditado) => {
 
     try {
@@ -72,9 +74,9 @@ export const put = async (productoEditado) => {
 
     } catch (error) {
         console.error(`Error PUT`, error)
-    }
+    } */
 
-}
+
 
 
 
