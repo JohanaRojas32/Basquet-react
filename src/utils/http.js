@@ -4,8 +4,6 @@
 export const get = async (url) => {
     
     try {
-        console.log("ASDASDS")
-        console.log(url)
         const respuesta = await fetch(url)
 
         if(!respuesta.ok) {

@@ -57,7 +57,7 @@ const ProductosProvider = ( { children }) => {
                 }
             
                 const productoCreado = await respuesta.json()     
-                console.log(productoCreado)
+                //console.log(productoCreado)
 
                 const nuevaProductoDB = [...productos, productoCreado]
                 setProductos(nuevaProductoDB) 
@@ -72,10 +72,10 @@ const ProductosProvider = ( { children }) => {
     //! METODO PUT - para modificar o actualizar productos:
     
     const modificarProducto = async (productoEditado) => {
-        console.log(productoEditado)
+        //console.log(productoEditado)
         const urlCompleta = url + productoEditado.id 
         
-        console.log('esta es la url completa:', urlCompleta)
+        //console.log('esta es la url completa:', urlCompleta)
 
         try {
             const fetchConfig = {
@@ -85,14 +85,12 @@ const ProductosProvider = ( { children }) => {
             }
          
            const respuest = await fetch(urlCompleta, fetchConfig)
-           console.log("respuest")
-           console.log(respuest)
               if(!respuest.ok) {
                 throw new Error(`[Algo paso con PUT] Error... ${respuest.status}`)
               }
         
               const datos = await respuest.json()
-              console.log(datos)
+              //console.log(datos)
         
             
 
@@ -115,7 +113,7 @@ const ProductosProvider = ( { children }) => {
 
     try {
         const urlCompleta = url + id
-        console.log(urlCompleta)
+       
 
         const fetchConfig = {
             method: 'DELETE',
@@ -127,7 +125,7 @@ const ProductosProvider = ( { children }) => {
           }
         
           const data = await respuesta.json()
-          console.log(data)
+          //console.log(data)
 
           // actualizo la base de datos:
   const nuevaProductoDB = productos.filter(producto => producto.id !== id) 

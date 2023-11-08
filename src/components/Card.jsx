@@ -11,7 +11,7 @@ const { agregarCarritoContext } = useContext(CarritoContext)
 
 
   const handleComprar = (producto) => {
-    console.log('comprando->', producto)
+    //console.log('comprando->', producto)
     agregarCarritoContext(producto)
   }
 

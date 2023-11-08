@@ -14,7 +14,7 @@ const FormularioInicial = {
 
 
 const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
-  console.log(setProductoAEditar)
+  //console.log(setProductoAEditar)
 
   const [formAlta, setFormAlta] = useState(FormularioInicial)
 
@@ -34,7 +34,7 @@ const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
       ...formAlta,    //lo que ya tenia mas lo que se esta escribiendo en el input
       [e.target.name]: e.target.value
     })
-    console.log(formAlta)
+   // console.log(formAlta)
   }
 
 
@@ -55,7 +55,6 @@ const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
   const handleReset = (e) => {
     setFormAlta(FormularioInicial)
   setProductoAEditar(null)
-    console.log(setProductoAEditar)
   }
 
 

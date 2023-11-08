@@ -34,7 +34,7 @@ const CarritoProvider = ({ children }) => {
             agregarAlCarrito(producto)
         } else {
             const productoDeCarrito = elProductoYaExisteEnCarrito(producto)
-            console.log(productoDeCarrito)
+            //console.log(productoDeCarrito)
             productoDeCarrito.cantidad++        // que le agregue una cantidad
 
             guardarCarrito(carrito)    //todo lo vuelvo a guardar en el LS
