@@ -15,7 +15,6 @@ const CarritoProvider = ({ children }) => {
 
 
 
-
     function elProductoAunNoExisteEnCarrito(producto) {           // va a ver si dentro de carrito ya existe el producto al que se clickea "comprar".
         return carrito.filter(prod => prod.id === producto.id).length            // 0 -> si no hay.  1-> si hay
     }
