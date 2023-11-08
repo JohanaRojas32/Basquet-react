@@ -13,7 +13,8 @@ const FormularioInicial = {
 }
 
 
-const FormAlta = ({ productoAEditar }) => {
+const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
+  console.log(setProductoAEditar)
 
   const [formAlta, setFormAlta] = useState(FormularioInicial)
 
@@ -44,17 +45,24 @@ const FormAlta = ({ productoAEditar }) => {
       agregarProducto(formAlta)
     } else {
      modificarProducto(formAlta)
-     console.log(modificarProducto)
+     //console.log(modificarProducto)
     }
-    console.log('que se resetee')
+    handleReset()
   }
 
+
+
+  const handleReset = (e) => {
+    setFormAlta(FormularioInicial)
+  setProductoAEditar(null)
+    console.log(setProductoAEditar)
+  }
 
 
 
   return (
     <> 
-
+  <h3>{ formAlta.id ? 'Editar' : 'Agregar'}</h3>
     <form className='mt-3' onSubmit={handleSubmit} >
     <input
       type="text"
@@ -97,7 +105,7 @@ const FormAlta = ({ productoAEditar }) => {
     />
 
     <button type='submit' className='btn btn-success mx-3'>Enviar</button>
-    <button type='reset' className='btn btn-dark' >Reset</button>
+    <button type='reset' className='btn btn-dark' onClick={handleReset} >Reset</button>
    </form>
 
    </>
