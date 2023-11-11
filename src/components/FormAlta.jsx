@@ -1,3 +1,4 @@
+import './FormAlta.css'
 import React, { useContext, useEffect, useState } from 'react'
 import ProductosContext from '../context/ProductosContext'
 
@@ -61,7 +62,7 @@ const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
 
   return (
     <> 
-  <h3>{ formAlta.id ? 'Editar' : 'Agregar'}</h3>
+  <h3 className='color-titulo'>{ formAlta.id ? 'Editar' : 'Agregar'}</h3>
     <form className='mt-3' onSubmit={handleSubmit} >
     <input
       type="text"
@@ -103,8 +104,8 @@ const FormAlta = ({ productoAEditar, setProductoAEditar }) => {
       value={formAlta.foto}
     />
 
-    <button type='submit' className='btn btn-success mx-3'>Enviar</button>
-    <button type='reset' className='btn btn-dark' onClick={handleReset} >Reset</button>
+    <button type='submit' className='btn boton-enviar mx-3'>Enviar</button>
+    <button type='reset' className='btn boton-reset py-2' onClick={handleReset}> Reset</button>
    </form>
 
    </>

@@ -41,5 +41,17 @@
       "foto": "spalding-violeta.webp"
     }
   ],
-  "carrito": []
+  "carrito": [
+    [
+      {
+        "id": 2,
+        "nombre": "Pelota Wilson ",
+        "tipo": "Exteriores",
+        "calidad": "Original",
+        "precio": "32900",
+        "foto": "wilson-evolution2.webp",
+        "cantidad": 1
+      }
+    ]
+  ]
 }

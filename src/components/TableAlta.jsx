@@ -9,7 +9,7 @@ const { productos } = useContext(ProductosContext)
 
   return (
    <>
-   <h2 className='mt-5'>Tabla de productos</h2>
+   <h2 className='mt-5 color-titulo'>Tabla de productos</h2>
 
 <table className="table table-striped mb-2">
    <thead>

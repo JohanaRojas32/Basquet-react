@@ -1,0 +1,22 @@
+.boton-modificar {
+    background-color: #e99e13;
+    box-shadow: -.6px .7px gray; ;
+}
+
+.boton-modificar:hover {
+    background-color: #d1780ac3;
+    box-shadow: -.3px .4px gray;
+}
+
+
+.boton-eliminar {
+    color: aliceblue;
+    background-color: #D80032;
+    box-shadow: -.3px .4px gray;
+}
+
+.boton-eliminar:hover {
+    color: rgba(240, 248, 255, 0.835);
+    background-color: #9b0327;
+    box-shadow: -.3px .4px gray;
+}

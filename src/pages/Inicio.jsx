@@ -20,6 +20,9 @@ useEffect(() => {
      <section className="row my-5 d-flex justify-content-center">
     
     <Carousel />
+
+    <h2 className='my-5 titulo-destacado text-center'> Conocé todos nuestros productos</h2>
+
    
    { 
    productos && productos.map(producto => (

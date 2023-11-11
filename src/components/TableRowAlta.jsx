@@ -1,3 +1,4 @@
+import './TableRowAlta.css'
 import React, { useContext } from 'react'
 import ProductosContext from '../context/ProductosContext'
 import Swal from 'sweetalert2'
@@ -58,8 +59,8 @@ const TableRowAlta = ( { producto, setProductoAEditar } ) => {
     <td>{producto.foto}</td>
     <td>
       {/* Lo hicimos asi para poder reutilizar este boton despues en form */}
-      <button className='btn btn-warning me-2'onClick={() => setProductoAEditar(producto)} >Modificar</button>
-      <button className='btn btn-dark' onClick={handleAlertaEliminar}>eliminar</button>
+      <button className='btn boton-modificar me-2'onClick={() => setProductoAEditar(producto)} >Modificar</button>
+      <button className='btn boton-eliminar' onClick={handleAlertaEliminar}>eliminar</button>
     </td>
   </tr>
   )

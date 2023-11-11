@@ -14,12 +14,12 @@ const CargaCarritoInicio = ( {item}) => {
     return (
     
     <tr>
-   <td>
+   <td className='fondo-carrito joha'>
     <img src={`/img/${item.foto}`} alt={item.nombre} width="100"/>
 </td>
-<td>{item.nombre}</td>
-<td>{item.precio}</td>
-<td>
+<td className='fondo-carrito joha'>{item.nombre}</td>
+<td className='fondo-carrito joha'>{item.precio}</td>
+<td className='fondo-carrito joha'>
     <button className="borrar-producto fas fa-times-circle btn-borrar" onClick={() => handleEliminar(item.id)} ></button>
 </td>
 </tr>

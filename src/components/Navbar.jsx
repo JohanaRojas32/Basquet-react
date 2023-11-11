@@ -19,8 +19,10 @@ const Navbar = () => {
 
     Swal.fire({
       title: "Upss",
-      text: "El carrito esta vacio",
-      icon: "error"
+      text: "¡El carrito está vacío!",
+      icon: "error",
+      background: '#eee',
+      width: '30%'
     });
    }else {
     location.href = './carrito'
@@ -58,19 +60,19 @@ const Navbar = () => {
 
       </div>
     
-      <div className="d-flex carrito-index me-2">
+      <div className="d-flex carrito-index me-2 ">
       <div className="dropdown dropstart">
         <a type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i className="fa-solid fa-cart-shopping fa-xl carrito"></i>
         </a>
-        <ul id="carrito-ul" className="dropdown-menu mx-2">
-          <table id="lista-carrito" className="table">
+        <ul className="dropdown-menu mx-2 fondo-carrito joha">
+          <table  className="table">
             <thead>
               <tr>
-                <th scope="col">Imagen</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th></th>
+                <th scope="col" className='fondo-carrito joha'>Imagen</th>
+                <th scope="col" className='fondo-carrito joha'>Nombre</th>
+                <th scope="col" className='fondo-carrito joha'>Precio</th>
+                <th className='fondo-carrito joha'></th>
               </tr>
             </thead>
             <tbody>
@@ -85,8 +87,8 @@ const Navbar = () => {
             </tbody>
           </table>
           <div className="d.grid gap-2 d-md-block justify-content-center ms-1">
-            <button id="vaciar-carrito" className="btn btn-primary" onClick={handleVaciarCarrito}>Vaciar carrito</button>
-            <button id="procesar-pedido" className="btn btn-danger"  onClick={handleProcesarCompra}>Procesar compra</button>
+            <button  className="btn boton-eliminar ms-2" onClick={handleVaciarCarrito}>Vaciar carrito</button>
+            <button className="btn agregar-carrito text-white ms-3"  onClick={handleProcesarCompra}>Procesar compra</button>
 
           </div>
         </ul>

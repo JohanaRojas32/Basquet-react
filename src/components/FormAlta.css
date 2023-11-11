@@ -1,0 +1,21 @@
+.color-titulo {
+    color: #E5E5CB;
+}
+
+.boton-enviar {
+    background-color: rgb(37, 236, 236);
+}
+
+.boton-enviar:hover {
+    background-color: rgb(73, 221, 221);
+}
+
+.boton-reset {
+    color: aliceblue;
+    background-color: rgb(3, 38, 67);
+}
+
+.boton-reset:hover {
+    color: aliceblue;
+    background-color: rgba(8, 42, 71, 0.794);
+}
