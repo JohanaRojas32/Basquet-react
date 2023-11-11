@@ -5,6 +5,9 @@
 
 body {  
     background-color: #303030e3;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 11rem;
 }
 
 .navbar-expand-lg.joha-nav {
