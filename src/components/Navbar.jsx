@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import CargaCarritoInicio from './CargaCarritoInicio'
@@ -9,6 +10,21 @@ const Navbar = () => {
 
   const handleVaciarCarrito = () => {
     vaciarCarritoContext()
+  }
+
+
+  const handleProcesarCompra = () => {
+   if (carrito.length === 0 ) {
+   // console.log('esta vacio')
+
+    Swal.fire({
+      title: "Upss",
+      text: "El carrito esta vacio",
+      icon: "error"
+    });
+   }else {
+    location.href = './carrito'
+   }
   }
 
 
@@ -70,7 +86,7 @@ const Navbar = () => {
           </table>
           <div className="d.grid gap-2 d-md-block justify-content-center ms-1">
             <button id="vaciar-carrito" className="btn btn-primary" onClick={handleVaciarCarrito}>Vaciar carrito</button>
-            <Link id="procesar-pedido" className="btn btn-danger" to='/carrito' >Procesar compra</Link>
+            <button id="procesar-pedido" className="btn btn-danger"  onClick={handleProcesarCompra}>Procesar compra</button>
 
           </div>
         </ul>
