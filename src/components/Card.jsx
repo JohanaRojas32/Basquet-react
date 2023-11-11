@@ -25,7 +25,7 @@ const { agregarCarritoContext } = useContext(CarritoContext)
         <ul className="list-unstyled mt-3 mb-4">
           <li className="list-group-item tipo">{producto.tipo}</li>
           <li className="list-group-item calidad">{producto.calidad}</li>
-          <li className="list-group-item precio">{producto.precio}</li>
+          <li className="list-group-item precio">${producto.precio}</li>
         </ul>
         <button className="btn agregar-carrito" onClick={() => handleComprar(producto)}>Comprar</button>
       </div>

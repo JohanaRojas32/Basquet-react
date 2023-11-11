@@ -2,18 +2,18 @@
   "productos": [
     {
       "id": 1,
-      "nombre": "Pelota Adidas All-court",
-      "tipo": "Exteriores",
+      "nombre": "Pelota adidad All-court",
+      "tipo": "Exteriores / interiores",
       "calidad": "Original",
-      "precio": "36100",
+      "precio": "25900",
       "foto": "adiadas-allcourt.webp"
     },
     {
       "id": 2,
-      "nombre": "Pelota Wilson Evolution",
-      "tipo": "Exteriores/ interiores",
+      "nombre": "Pelota Wilson ",
+      "tipo": "Exteriores",
       "calidad": "Original",
-      "precio": "25900",
+      "precio": "32900",
       "foto": "wilson-evolution2.webp"
     },
     {
@@ -27,21 +27,19 @@
     {
       "id": 4,
       "nombre": "Pelota Wilson Reaction",
-      "tipo": "Exter",
+      "tipo": "Exteriores",
       "calidad": "Original",
-      "precio": "27100",
+      "precio": "19900",
       "foto": "magneotravez.webp"
     },
     {
       "id": 5,
-      "nombre": "Pelota Spalding",
+      "nombre": "Spalding Violeta",
       "tipo": "Exteriores",
       "calidad": "Original",
-      "precio": "26900",
+      "precio": "22100",
       "foto": "spalding-violeta.webp"
     }
   ],
-  "carrito": [
-    []
-  ]
+  "carrito": []
 }

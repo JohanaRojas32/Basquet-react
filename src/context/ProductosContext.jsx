@@ -1,6 +1,8 @@
+import Swal from 'sweetalert2'
 import { createContext, useEffect, useState } from "react";
 import { get } from "../utils/http";
 export { createContext } from "react";
+
 
 
 
@@ -73,7 +75,9 @@ const ProductosProvider = ( { children }) => {
     
     const modificarProducto = async (productoEditado) => {
         //console.log(productoEditado)
+       /*  const urlCompleta = url + '/' + productoEditado.id  */
         const urlCompleta = url + productoEditado.id 
+       
         
         //console.log('esta es la url completa:', urlCompleta)
 
@@ -109,7 +113,9 @@ const ProductosProvider = ( { children }) => {
 
     //! METODO DELETE - Eliminar producto
 
+
     const eliminarProducto = async (id) => {
+
 
     try {
         const urlCompleta = url + id
@@ -134,10 +140,11 @@ setProductos(nuevaProductoDB)
     } catch (error) {
         console.log('Algo paso con el [eliminarProducto]')
     }
-    }
 
 
-        
+
+    } 
+    
     
 
 
