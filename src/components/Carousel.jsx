@@ -4,7 +4,7 @@ const Carousel = () => {
   return (
     <div id="carouselExampleInterval" className="carousel slide joha-carousel" data-bs-ride="carousel">
     <div className="carousel-inner">
-      <div className="carousel-item active" data-bs-interval="3000">
+      <div className="carousel-item active" data-bs-interval="2000">
 
         <img src="/img/carousel/cancha1.jpg " className="d-block w-100" alt="hombre y pelota"/>
         <div className="carousel-caption d-none d-md-block">
