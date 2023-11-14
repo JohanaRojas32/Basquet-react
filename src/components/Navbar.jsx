@@ -25,7 +25,7 @@ const Navbar = () => {
       width: '30%'
     });
    }else {
-    location.href = './pages/carrito.jsx'
+    location.href = '/carrito'
    }
   }
 
