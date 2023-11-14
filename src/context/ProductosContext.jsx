@@ -12,7 +12,7 @@ const ProductosContext = createContext()
 
 // armamos el provider
 // armo la url en el .env y la traigo aca:
-const url = 'https://6541630df0b8287df1fe4d72.mockapi.io/productos/'
+const url = 'https://6553c1a15449cfda0f2f21dd.mockapi.io/productos/'
 
 const ProductosProvider = ( { children }) => {
     //ESTADO:
@@ -77,6 +77,7 @@ const ProductosProvider = ( { children }) => {
         //console.log(productoEditado)
        /*  const urlCompleta = url + '/' + productoEditado.id  */
         const urlCompleta = url + productoEditado.id 
+        //console.log(urlCompleta)
        
         
         //console.log('esta es la url completa:', urlCompleta)
@@ -119,6 +120,7 @@ const ProductosProvider = ( { children }) => {
 
     try {
         const urlCompleta = url + id
+        //console.log(urlCompleta)
        
 
         const fetchConfig = {
